@@ -1,6 +1,22 @@
+import example.*
 
-test "testX" {
-
-	assert.that(true)
-
+describe "Tests de Jugadores"{
+	var rekkles = new Jugador(antiguedad = 9, competenciasInternacionales = 3)
+	var sjokz = new Jugador()
+	
+	test "Jugador con antiguedad > 3 esTitular"{
+		assert.that(rekkles.esTitular())
+	}
+	
+	test "Jugador con antiguedad <= 3 no esTitular"{
+		assert.notThat(sjokz.esTitular())
+	}
+	
+	test "Jugador con competenciasInt > 2 tiene experiencia"{
+		assert.that(rekkles.esTitular())
+	}
+	
+	test "Jugador con competenciasInt <= 2 NO tiene experiencia"{
+		assert.notThat(sjokz.esTitular())
+	}
 }
